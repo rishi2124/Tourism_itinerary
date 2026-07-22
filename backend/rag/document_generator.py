@@ -22,3 +22,14 @@ class DocumentGenerator:
         Reads the dataset and returns a list of documents.
         """
         pass
+
+
+if __name__ == "__main__":
+
+    generator = DocumentGenerator(
+        "data/processed/master_varanasi_attractions.csv"
+    )
+
+    print(generator.df.head())
+
+    print(f"\nLoaded {len(generator.df)} attractions successfully.")
