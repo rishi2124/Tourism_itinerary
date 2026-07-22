@@ -2,5 +2,23 @@
 Document Generator
 
 Converts the master tourism dataset into rich knowledge documents
-that can be embedded into ChromaDB.
+for ChromaDB ingestion.
 """
+
+import pandas as pd
+
+
+class DocumentGenerator:
+    """
+    Generates rich documents from the master tourism dataset.
+    """
+
+    def __init__(self, csv_path: str):
+        self.csv_path = csv_path
+        self.df = pd.read_csv(csv_path)
+
+    def generate_documents(self):
+        """
+        Reads the dataset and returns a list of documents.
+        """
+        pass
